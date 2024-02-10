@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CATLICK</title>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+#hangmanPicture {
+    margin: 20px;
+}
+
+#hangmanImg {
+    width: 200px; /* Adjust based on your image size for a better fit */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#wordDisplay {
+    margin: 20px;
+    padding: 10px;
+    font-size: 32px;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    color: #333;
+}
+
+#keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #dc3545;
+    cursor: not-allowed;
+}
+
+#message {
+    margin: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Specific styles for the Restart button */
+button#restartButton {
+    background-color: #28a745;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+button#restartButton:hover {
+    background-color: #218838;
+}
+    </style>
+</head>
+<body>
+    <div id="hangmanPicture">
+        <img src="1.png" alt="Hangman" id="hangmanImg">
+    </div>
+    <div id="wordDisplay"></div>
+	<div id="guessesRemaining"></div> <!-- New element for displaying guesses remaining -->
+    <div id="keyboard"></div>
+    <div id="message"></div>
+
+    <script src="hangman.js"></script>
+</body>
+</html>
+
